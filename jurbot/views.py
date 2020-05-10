@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 import requests
-from twilio.twiml.messaging_response import MessagingResponsefrom
+import twilio
 
 
 def index(request):
