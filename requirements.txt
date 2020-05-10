@@ -2,3 +2,4 @@ django
 gunicorn
 django-heroku
 twilio
+twilio-python
