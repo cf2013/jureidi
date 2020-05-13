@@ -3,5 +3,5 @@ gunicorn
 django-heroku
 twilio
 requests
-urllib
+urllib.parse
 json
