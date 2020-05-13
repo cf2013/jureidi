@@ -22,7 +22,7 @@ def bot(request):
     message = client.messages \
     .create(
     from_='whatsapp:+14155238886',
-    body=str(request.values['Body']),
+    body=str(HttpRequest.POST),
     to='whatsapp:+5214426778033'
     )
     print(message.sid)
