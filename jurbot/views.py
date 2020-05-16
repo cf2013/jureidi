@@ -6,9 +6,15 @@ import os
 from twilio.rest import Client
 from django.views.decorators.csrf import csrf_exempt
 import json
+import psycopg2
 
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
+
+def checkUser(id):
+    DATABASE_URL = os.environ['DATABASE_URL']
+    conn = psycopg2.connect(DATABASE_URL, sslmode='require') 
+
 
 @csrf_exempt
 def bot(request):
