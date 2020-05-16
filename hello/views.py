@@ -17,7 +17,7 @@ def db(request):
     greetings = Greeting.objects.all()
 
     #ask name if not number in usersBot
-    userId = UsersBot()
-    userId.save()
+    #userId = UsersBot()
+    #userId.save()
 
     return render(request, "db.html", {"greetings": greetings})
