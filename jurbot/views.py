@@ -74,7 +74,7 @@ def parseInput(request):
         if "HOLA" in sq:
             ans = "Hola! bienvenido soy un asistente de mesero, "\
             "En que te puedo servir?"
-        elif "Hi" in sq:
+        elif "HI" in sq:
             ans = "Hello, spanish is prefered in Mex but, "\
             "How might I help you?"
         else:
