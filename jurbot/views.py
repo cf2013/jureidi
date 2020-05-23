@@ -30,18 +30,34 @@ def botReply(ans):
     # Return an HHTPResponse as Django expects a response from the view
     return HttpResponse(status=200)
 
+
+
 def parseInput(request):
+    def semanticParse(unimsg):
+        question = ""
+        return question
+
+    def doChat(q):
+        ans = ""
+        return ans
+
+    #ensure only utf-8
     body_unicode = request.body.decode('utf-8')
+    #convert URL to unicode
     unq = unquote(body_unicode)
+    return unq
+    answer = ""
     
-    pfrom = ""
     #check id client
-    if request:
-        ans=str(unq)
-        pfrom = str(ans)
+    if unq:
+        #ready to interact.
+        #perform semantic parsing
+        question = semanticParse(unq)
+        if question:
+            answer = doChat(question)
     else:
-        ans='source'
-    return pfrom
+        answer = "We are experimenting issues with the server, sorry!"
+    return 
 
 @csrf_exempt
 def bot(request):
